@@ -127,9 +127,13 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="consoleDraw.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="screenCtrl.cpp" />
     <ClCompile Include="screenCtrl.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="consoleDraw.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
