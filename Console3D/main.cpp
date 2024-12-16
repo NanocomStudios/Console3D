@@ -1,6 +1,10 @@
 #include <iostream>
 #include "screenCtrl.h"
 #include <windows.h>
+#include <math.h>
+
+# define M_PI           3.14159265358979323846 
+
 using namespace std;
 
 void drawLine(float x1, float y1, float x2, float y2, char ch) {
@@ -37,13 +41,21 @@ void drawLine(float x1, float y1, float x2, float y2, char ch) {
 	}
 }
 
+void drawLineA(float x, float y, float angle, float length, char ch) {
+	drawLine(x, y, cos(angle) * length, sin(angle) * length, ch);
+	
+}
+
+double toRad(double angle) {
+	return (angle * M_PI) / 180;
+}
 
 int main() {
 	int previousI = 0;
 	while (1) {
-		for (int i = 0; i < 79; i++) {
-			drawLine(40, 0, previousI, 20, ' ');
-			drawLine(40, 0, i, 20, '0');
+		for (int i = 0; i < 360; i++) {
+			drawLineA(40, 25, toRad(previousI), 5, ' ');
+			drawLineA(40, 25, toRad(i), 5, '0');
 			previousI = i;
 			Sleep(50);
 		}
