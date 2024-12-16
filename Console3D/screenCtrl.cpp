@@ -40,7 +40,6 @@ void setCursor(bool state) {
     cout << code;
 }
 
-#include <iostream>
 #include <time.h>
 #include <stdlib.h>
 #include <windows.h>

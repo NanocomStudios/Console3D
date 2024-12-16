@@ -53,3 +53,4 @@ void drawRandomLine() {
 	consoleColorSet(((rand() % 2) == 0) ? ((rand() % 8) + 40) : ((rand() % 8) + 100));
 	drawLine((rand() % 80), (rand() % 25), (rand() % 80), (rand() % 25), ' ');
 }
+
